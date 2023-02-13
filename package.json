@@ -1,0 +1,63 @@
+{
+  "name": "seia",
+  "version": "0.0.1",
+  "type": "module",
+  "author": "藍+85CD",
+  "license": "WTFPL",
+  "keywords": [
+    "indieweb",
+    "webcomponent",
+    "webcomponents",
+    "web-components",
+    "webmention",
+    "webmentions"
+  ],
+  "description": "Browser-side Web Component for rendering Webmentions.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/importantimport/seia.git"
+  },
+  "homepage": "https://github.com/importantimport/seia",
+  "bugs": "https://github.com/importantimport/seia/issues",
+  "main": "dist/seia.js",
+  "module": "dist/seia.js",
+  "exports": {
+    ".": {
+      "types": "./dist/seia.d.ts",
+      "import": "./dist/seia.js"
+    }
+  },
+  "types": "dist/seia.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && tsup",
+    "gen": "lit labs gen"
+  },
+  "devDependencies": {
+    "@iconify-json/svg-spinners": "^1.1.0",
+    "@lit-labs/cli": "^0.3.0",
+    "@lit-labs/task": "^2.0.0",
+    "@types/trusted-types": "^2.0.2",
+    "@unocss/reset": "^0.49.4",
+    "esbuild": "^0.17.8",
+    "lit": "^2.6.1",
+    "prettier-config-standard": "^5.0.0",
+    "rollup-plugin-html-literals": "^1.1.6",
+    "tsup": "^6.6.2",
+    "typescript": "^4.9.3",
+    "unocss": "^0.49.4",
+    "vite": "^4.1.0",
+    "vite-plugin-dts": "^1.7.2"
+  },
+  "peerDependencies": {
+    "@types/trusted-types": "^2.0.2"
+  },
+  "peerDependenciesMeta": {
+    "@types/trusted-types": {
+      "optional": true
+    }
+  }
+}
