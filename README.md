@@ -1,5 +1,8 @@
 # Seia
 
+[![npm package](https://img.shields.io/npm/v/seia)](https://www.npmjs.com/package/seia)
+![brotli size](https://img.badgesize.io/https://esm.run/seia?compression=brotli)
+
 Browser-side Web Component for rendering Webmentions.
 
 ## Usage
