@@ -36,7 +36,9 @@ export class Seia extends LitElement {
                     ${avatar.map(
                       ({ activity, data: { author, url } }) => html`
                         <div
-                          class="p-like h-cite un-inline-block -un-space-x-2 un-space-x-reverse un-shrink-0">
+                          class="${activity.type === 'like'
+                            ? 'p-like '
+                            : ''}h-cite un-inline-block -un-space-x-2 un-space-x-reverse un-shrink-0">
                           <a class="u-url" href=${url}>
                             <figure class="un-relative p-author h-card">
                               <img
