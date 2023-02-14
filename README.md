@@ -1,5 +1,6 @@
 # Seia
 
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz_small.svg)](https://stackblitz.com/github/importantimport/seia?file=index.html)
 [![npm package](https://img.shields.io/npm/v/seia)](https://www.npmjs.com/package/seia)
 ![brotli size](https://img.badgesize.io/https://esm.run/seia?compression=brotli)
 
