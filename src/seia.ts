@@ -7,7 +7,7 @@ import { Task } from '@lit-labs/task'
 import reset from '@unocss/reset/tailwind.css?inline'
 // reduce links
 import { reduce } from './utils/reduce'
-
+// activity type emoji
 import { emoji } from './utils/emoji'
 
 /**
@@ -147,12 +147,15 @@ export class Seia extends LitElement {
   @property({ type: Boolean })
   'unsafe-html' = true
 
+  /** @see {@link https://github.com/aaronpk/webmention.io#sorting} */
   @property({ type: String })
   'sort-by': 'created' | 'updated' | 'published' | 'rsvp' = 'created'
 
+  /** @see {@link https://github.com/aaronpk/webmention.io#sorting} */
   @property({ type: String })
   'sort-dir': 'down' | 'up' = 'down'
 
+  /** @see {@link https://github.com/aaronpk/webmention.io#paging} */
   @property({ type: Number })
   'per-page' = 99
 
