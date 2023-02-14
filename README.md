@@ -42,4 +42,42 @@ Can't create React / Vue / Angular wrapper until [lit/lit#3334](https://github.c
 
 ## Customizing
 
-TODO
+### CSS Variables
+
+> WIP
+
+You can adjust the appearance of Seia with CSS variables.
+
+For example, to apply the Material 3 color scheme:
+
+```css
+:root {
+  --seia-color-bg: var(--md-sys-color-surface-variant);
+  --seia-color-text: var(--md-sys-color-on-surface-variant);
+  --seia-color-primary: var(--md-sys-color-primary);
+}
+```
+
+### Style Element
+
+You can inject styles into the Shadow DOM via the `css` attribute.
+
+```html
+<s-e-i-a css=".h-cite{padding:1rem};"></s-e-i-a>
+```
+
+### Emoji Fonts
+
+> WIP
+
+Seia uses text rather than icons, so importing Emoji fonts and setting the font-family should work. for example:
+
+```css
+/* Noto Colr Emoji Glyf */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Colr+Emoji+Glyf&display=swap');
+
+:root {
+  --seia-font-family: ui-sans-serif, sans-serif, 'Noto Colr Emoji Glyf';
+  --seia-font-family-mono: ui-monospace, monospace, 'Noto Colr Emoji Glyf';
+}
+```
