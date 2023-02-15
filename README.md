@@ -44,8 +44,6 @@ Can't create React / Vue / Angular wrapper until [lit/lit#3334](https://github.c
 
 ### CSS Variables
 
-> WIP
-
 You can adjust the appearance of Seia with CSS variables.
 
 For example, to apply the Material 3 color scheme:
