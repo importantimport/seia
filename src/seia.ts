@@ -139,11 +139,12 @@ export class Seia extends LitElement {
                                 <span opacity-75>
                                   ${author.url &&
                                   html`<a
-                                    href=${author.url}
-                                    hover="underline"
-                                    class="u-url"
-                                    >${author.url.split('://')[1]}</a
-                                  >`}
+                                      href=${author.url}
+                                      hover="underline"
+                                      class="u-url"
+                                      >${author.url.split('://')[1]}</a
+                                    >
+                                    <span>·</span>`}
                                   <a
                                     href=${url}
                                     hover="underline"
