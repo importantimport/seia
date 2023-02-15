@@ -68,16 +68,9 @@ You can inject styles into the Shadow DOM via the `css` attribute.
 
 ### Emoji Fonts
 
-> WIP
-
 Seia uses text rather than icons, so importing Emoji fonts and setting the font-family should work. for example:
 
 ```css
 /* Noto Colr Emoji Glyf */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Colr+Emoji+Glyf&display=swap');
-
-:root {
-  --seia-font-family: ui-sans-serif, sans-serif, 'Noto Colr Emoji Glyf';
-  --seia-font-family-mono: ui-monospace, monospace, 'Noto Colr Emoji Glyf';
-}
 ```
