@@ -20,120 +20,151 @@ export class Seia extends LitElement {
       <style>
         ${this.css}
       </style>
-      ${this.mentions.render({
-        initial: () =>
-          html`<div class="i-svg-spinners-90-ring-with-bg un-h-12 un-w-12" />`,
-        pending: () => html`<div
-          class="i-svg-spinners-270-ring-with-bg un-h-12 un-w-12" />`,
-        error: console.error,
-        complete: ({ links }: Mentions) => {
-          const { avatar, content } = reduce(links)
-          return html`
-            ${avatar.length > 0
-              ? html`
-                  <div
-                    class="un-flex un-flex-row-reverse un-justify-end un-flex-wrap un-gap-y-2 un-p-4 un-bg-gray-200 un-rounded-card un-mb-2">
-                    ${avatar.map(
-                      ({ activity, data: { author, url } }) => html`
-                        <div
-                          class="${activity.type === 'like'
-                            ? 'p-like '
-                            : ''}h-cite un-inline-block -un-space-x-2 un-space-x-reverse un-shrink-0">
-                          <a class="u-url" href=${url}>
-                            <figure class="un-relative p-author h-card">
-                              <img
-                                class="u-photo un-w-12 un-h-12 un-mb-auto un-rounded-avatar un-ring-2 un-ring-gray-200"
-                                src=${author.photo ??
-                                this['fallback-photo'].replace(
-                                  '%NAME%',
-                                  encodeURIComponent(author.name)
-                                )} />
-                              <span class="un-absolute un-bottom-0 un-right-0"
-                                >${emoji[activity.type]}</span
-                              >
-                            </figure>
-                          </a>
-                          ${author.url &&
-                          html`
-                            <a class="p-name u-url un-hidden" href=${author.url}
-                              >${author.name}</a
-                            >
-                          `}
-                        </div>
-                      `
-                    )}
-                  </div>
-                `
-              : null}
-            ${content.length > 0
-              ? html`
-                  <div class="un-flex un-flex-col un-gap-2 un-mb-2">
-                    ${content.map(
-                      ({
-                        activity,
-                        data: { author, content, url },
-                        verified_date
-                      }) => html`
-                        <div
-                          class="p-comment h-cite un-p-4 un-bg-gray-200 un-rounded-card">
+      <div id="seia-container" flex="~ col" gap="2" text="seia-text">
+        ${this.mentions.render({
+          initial: () =>
+            html`<i-svg-spinners-90-ring-with-bg w-12 h-12 mx-auto my-4 text="seia-primary" />`,
+          pending: () =>
+            html`<i-svg-spinners-270-ring-with-bg w-12 h-12 mx-auto my-4 text="seia-primary" />`,
+          error: console.error,
+          complete: ({ links }: Mentions) => {
+            const { avatar, content } = reduce(links)
+            return html`
+              ${avatar.length > 0
+                ? html`
+                    <div
+                      id="seia-avatar-container"
+                      flex="~ row-reverse wrap"
+                      space-x="-2 reverse"
+                      gap="y-2"
+                      p-4
+                      bg="seia-bg"
+                      justify="end"
+                      rounded="card">
+                      ${avatar.map(
+                        ({ activity, data: { author, url } }) => html`
                           <div
-                            class="p-author h-card un-flex un-items-center un-gap-3 un-mb-4">
-                            <figure class="un-relative">
-                              <img
-                                class="u-photo un-w-12 un-h-12 un-mb-auto un-rounded-avatar"
-                                src=${author.photo ??
-                                this['fallback-photo'].replace(
-                                  '%NAME%',
-                                  encodeURIComponent(author.name)
-                                )} />
-                              <span class="un-absolute un-bottom-0 un-right-0"
-                                >${emoji[activity.type]}</span
+                            shrink="0"
+                            class="${activity.type === 'like'
+                              ? 'p-like '
+                              : ''}h-cite">
+                            <a class="u-url" href=${url}>
+                              <figure relative class="p-author h-card">
+                                <img
+                                  w-12
+                                  h-12
+                                  mb-auto
+                                  rounded="avatar"
+                                  ring="2 seia-bg"
+                                  class="u-photo"
+                                  src=${author.photo ??
+                                  this['fallback-photo'].replace(
+                                    '%NAME%',
+                                    encodeURIComponent(author.name)
+                                  )} />
+                                <span absolute bottom="0" right="0"
+                                  >${emoji[activity.type]}</span
+                                >
+                              </figure>
+                            </a>
+                            ${author.url &&
+                            html`
+                              <a class="p-name u-url" hidden href=${author.url}
+                                >${author.name}</a
                               >
-                            </figure>
-                            <div class="un-flex un-flex-col un-break-all">
-                              ${author.url
-                                ? html`<a
-                                    class="p-name u-url un-font-bold"
+                            `}
+                          </div>
+                        `
+                      )}
+                    </div>
+                  `
+                : null}
+              ${content.length > 0
+                ? html`
+                    <div id="seia-content-container" flex="~ col" gap="2">
+                      ${content.map(
+                        ({
+                          activity,
+                          data: { author, content, url },
+                          verified_date
+                        }) => html`
+                          <div
+                            p-4
+                            bg="seia-bg"
+                            rounded="card"
+                            class="p-comment h-cite">
+                            <div
+                              flex
+                              items-center
+                              gap="3"
+                              mb-4
+                              class="p-author h-card">
+                              <figure relative>
+                                <img
+                                  w-12
+                                  h-12
+                                  mb-auto
+                                  rounded="avatar"
+                                  class="u-photo"
+                                  src=${author.photo ??
+                                  this['fallback-photo'].replace(
+                                    '%NAME%',
+                                    encodeURIComponent(author.name)
+                                  )} />
+                                <span absolute bottom="0" right="0"
+                                  >${emoji[activity.type]}</span
+                                >
+                              </figure>
+                              <div flex="~ col" break-all>
+                                ${author.url
+                                  ? html`<a
+                                      font="bold"
+                                      class="p-name u-url"
+                                      href=${author.url}
+                                      >${author.name}</a
+                                    >`
+                                  : html`<span font="bold" class="p-name"
+                                      >${author.name}</span
+                                    >`}
+                                <span opacity-75>
+                                  ${author.url &&
+                                  html`<a
                                     href=${author.url}
-                                    >${author.name}</a
-                                  >`
-                                : html`<span class="p-name un-font-bold"
-                                    >${author.name}</span
+                                    hover="underline"
+                                    class="u-url"
+                                    >${author.url.split('://')[1]}</a
                                   >`}
-                              <span class="un-text-gray-600">
-                                ${author.url &&
-                                html`<a
-                                  href=${author.url}
-                                  class="u-url hover:un-underline"
-                                  >${author.url.split('://')[1]}</a
-                                >`}
-                                <a class="u-url hover:un-underline" href=${url}>
-                                  <time
-                                    class="dt-published"
-                                    datetime=${verified_date}
-                                    >${new Date(
-                                      verified_date
-                                    ).toLocaleDateString()}</time
-                                  >
-                                </a>
-                              </span>
+                                  <a
+                                    href=${url}
+                                    hover="underline"
+                                    class="u-url">
+                                    <time
+                                      class="dt-published"
+                                      datetime=${verified_date}
+                                      >${new Date(
+                                        verified_date
+                                      ).toLocaleDateString()}</time
+                                    >
+                                  </a>
+                                </span>
+                              </div>
+                            </div>
+                            <!-- TODO: p-r-o-s-e (unocss/unocss#2189) -->
+                            <div class="e-content">
+                              ${html`${this['unsafe-html']
+                                ? unsafeHTML(content)
+                                : content}`}
                             </div>
                           </div>
-                          <!-- TODO: p-r-o-s-e (unocss/unocss#2189) -->
-                          <div class="e-content">
-                            ${html`${this['unsafe-html']
-                              ? unsafeHTML(content)
-                              : content}`}
-                          </div>
-                        </div>
-                      `
-                    )}
-                  </div>
-                `
-              : null}
-          `
-        }
-      })}
+                        `
+                      )}
+                    </div>
+                  `
+                : null}
+            `
+          }
+        })}
+      </div>
     `
   }
 
