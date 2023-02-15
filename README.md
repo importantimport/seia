@@ -40,6 +40,20 @@ Now add Seia components where you need them:
 
 Can't create React / Vue / Angular wrapper until [lit/lit#3334](https://github.com/lit/lit/issues/3334) is fixed.
 
+## Attributes
+
+| Attribute      | Default                                                              | Comment                                          |
+| -------------- | -------------------------------------------------------------------- | ------------------------------------------------ |
+| api            | https://webmention.io/api/mentions.json                              |                                                  |
+| css            | undefined                                                            | Inject styles                                    |
+| powered-by     | true                                                                 |                                                  |
+| unsafe-html    | true                                                                 |                                                  |
+| sort-by        | 'created'                                                            | https://github.com/aaronpk/webmention.io#sorting |
+| sort-dir       | 'down'                                                               | https://github.com/aaronpk/webmention.io#sorting |
+| per-page       | 99                                                                   | https://github.com/aaronpk/webmention.io#paging  |
+| target         | globalThis.location.href                                             | without searchParams                             |
+| fallback-photo | https://ui-avatars.com/api/?name=%NAME%&background=random&format=svg | `%NAME%` will be replaced with the `author.name` |
+
 ## Customizing
 
 ### CSS Variables
