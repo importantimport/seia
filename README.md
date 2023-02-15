@@ -6,6 +6,11 @@
 
 Browser-side Web Component for rendering Webmentions.
 
+## Compatible Services
+
+- [Webmention.io](https://webmention.io) (mentions.json)
+- PR's welcome!
+
 ## Usage
 
 ### Component
