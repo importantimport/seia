@@ -23,9 +23,19 @@ export class Seia extends LitElement {
       <div id="seia-container" flex="~ col" gap="2" text="seia-text">
         ${this.mentions.render({
           initial: () =>
-            html`<i-svg-spinners-90-ring-with-bg w-12 h-12 mx-auto my-4 text="seia-primary" />`,
+            html`<i-svg-spinners-90-ring-with-bg
+              w-12
+              h-12
+              mx-auto
+              my-4
+              text="seia-primary" />`,
           pending: () =>
-            html`<i-svg-spinners-270-ring-with-bg w-12 h-12 mx-auto my-4 text="seia-primary" />`,
+            html`<i-svg-spinners-270-ring-with-bg
+              w-12
+              h-12
+              mx-auto
+              my-4
+              text="seia-primary" />`,
           error: console.error,
           complete: ({ links }: Mentions) => {
             const { avatar, content } = reduce(links)
@@ -161,6 +171,30 @@ export class Seia extends LitElement {
                     </div>
                   `
                 : null}
+              ${this['powered-by']
+                ? html`<span ml-auto mr-2 text="sm"
+                    >Powered by
+                    ${this.api.includes('webmention.io')
+                      ? html`<a
+                            href="https://webmention.io"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                            text="seia-primary"
+                            hover="underline"
+                            >Webmention.io</a
+                          >
+                          &`
+                      : ''}
+                    <a
+                      href="https://github.com/importantimport/seia"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                      text="seia-primary"
+                      hover="underline"
+                      >Seia</a
+                    ></span
+                  >`
+                : ''}
             `
           }
         })}
@@ -176,6 +210,9 @@ export class Seia extends LitElement {
 
   @property({ type: String })
   css = undefined
+
+  @property({ type: Boolean })
+  'powered-by' = true
 
   @property({ type: Boolean })
   'unsafe-html' = true
