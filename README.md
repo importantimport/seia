@@ -54,9 +54,9 @@ Can't create React / Vue / Angular wrapper until [lit/lit#3334](https://github.c
 | css            | undefined                                                            | Inject styles                                    |
 | powered-by     | true                                                                 |                                                  |
 | unsafe-html    | true                                                                 |                                                  |
-| sort-by        | 'created'                                                            | https://github.com/aaronpk/webmention.io#sorting |
-| sort-dir       | 'down'                                                               | https://github.com/aaronpk/webmention.io#sorting |
-| per-page       | 99                                                                   | https://github.com/aaronpk/webmention.io#paging  |
+| sort-by        | 'created'                                                            | [webmention.io#sorting](https://github.com/aaronpk/webmention.io#sorting) |
+| sort-dir       | 'down'                                                               | [webmention.io#sorting](https://github.com/aaronpk/webmention.io#sorting) |
+| per-page       | 99                                                                   | [webmention.io#paging](https://github.com/aaronpk/webmention.io#paging)  |
 | target         | globalThis.location.href                                             | without searchParams                             |
 | fallback-photo | https://ui-avatars.com/api/?name=%NAME%&background=random&format=svg | `%NAME%` will be replaced with the `author.name` |
 
