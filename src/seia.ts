@@ -263,11 +263,11 @@ export class Seia extends LitElement {
     'https://ui-avatars.com/api/?name=%NAME%&background=random&format=svg'
 
   private mentions = new Task(this, {
-    args: () => [],
-    task: async () =>
+    args: () => [this.target],
+    task: async ([target]) =>
       await fetch(
         `${this.api}?${new URLSearchParams({
-          target: this.target,
+          target,
           page: '0',
           'per-page': this['per-page'].toString(),
           'sort-by': this['sort-by'],
