@@ -34,6 +34,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build && tsup",
+    "build:site": "vite build -c vite.config.site.ts",
+    "preview": "vite preview",
     "gen": "lit labs gen"
   },
   "devDependencies": {
