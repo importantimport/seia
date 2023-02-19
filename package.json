@@ -37,6 +37,7 @@
     "gen": "lit labs gen"
   },
   "devDependencies": {
+    "@iconify-json/simple-icons": "^1.1.44",
     "@iconify-json/svg-spinners": "^1.1.0",
     "@lit-labs/cli": "^0.3.0",
     "@lit-labs/task": "^2.0.0",

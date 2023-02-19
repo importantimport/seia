@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@iconify-json/simple-icons': ^1.1.44
   '@iconify-json/svg-spinners': ^1.1.0
   '@lit-labs/cli': ^0.3.0
   '@lit-labs/task': ^2.0.0
@@ -17,6 +18,7 @@ specifiers:
   vite-plugin-dts: ^1.7.2
 
 devDependencies:
+  '@iconify-json/simple-icons': 1.1.44
   '@iconify-json/svg-spinners': 1.1.0
   '@lit-labs/cli': 0.3.0
   '@lit-labs/task': 2.0.0
@@ -452,6 +454,12 @@ packages:
     requiresBuild: true
     dev: true
     optional: true
+
+  /@iconify-json/simple-icons/1.1.44:
+    resolution: {integrity: sha512-oPJF0DtKfHt/maZ3r+V/DN7a7Vya0yqwheMQzcdX88+XHhWL/n1yA6X4Xt3zbRk3Q06cAlWUGi82inqM8NpEFw==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: true
 
   /@iconify-json/svg-spinners/1.1.0:
     resolution: {integrity: sha512-hIImSdcK2bTGC4YNt9smh9a3+tuDRxdvqubCShSb9jbuq1/iH0gGG+lRPq0Frk1QdI5e/GN6d5VbFsuULGu2Jg==}
