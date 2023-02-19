@@ -25,7 +25,7 @@ export default defineConfig({
       presets: [
         presetAttributify(),
         presetTagify(),
-        presetUno(),
+        presetUno({ dark: 'media' }),
         presetIcons({ prefix: 'i-', scale: 1.5 }),
         presetTypography()
       ],
@@ -36,9 +36,9 @@ export default defineConfig({
       theme: {
         colors: {
           seia: {
-            bg: 'var(--seia-color-bg, #f9fafb)', // coolgray-50
-            text: 'var(--seia-color-text, #111827)', // coolgray-900
-            primary: 'var(--seia-color-primary, #f59e0b)' // orange-500
+            bg: 'var(--seia-color-bg, #f8fafc)', // slate-50
+            text: 'var(--seia-color-text, #0f172a)', // slate-900
+            primary: 'var(--seia-color-primary, #ea580c)' // orange-600
           }
         },
         borderRadius: {
