@@ -84,6 +84,37 @@ You can inject styles into the Shadow DOM via the `css` attribute.
 <s-e-i-a css=".h-cite{padding:1rem};"></s-e-i-a>
 ```
 
+### Presets
+
+Seia has prepared a number of presets.
+
+#### Dark Mode
+
+Add simple dark mode support for the default color scheme.
+
+It is not enabled by default since custom color schemes are encouraged.
+
+```html
+<!-- link -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/seia/dist/styles/dark.css" />
+<!-- inject -->
+<s-e-i-a
+  css="@import url('https://cdn.jsdelivr.net/npm/seia/dist/styles/dark.css');"></s-e-i-a>
+```
+
+#### Material Theme
+
+Apply the Material Theme as shown above.
+
+```html
+<!-- link -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/seia/dist/styles/material.css" />
+<!-- inject -->
+<s-e-i-a css="@import url('https://cdn.jsdelivr.net/npm/seia/dist/styles/material.css');"></s-e-i-a>
+```
+
 ### Emoji Fonts
 
 Seia uses text rather than icons, so importing Emoji fonts and setting the font-family should work. for example:
