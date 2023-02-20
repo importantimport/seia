@@ -59,7 +59,7 @@ export class Hero extends LitElement {
   @property({ type: Number })
   timer: number | undefined = undefined
 
-  private handleInput({ target: { value } }: { target: { value: string } }) {
+  private handleInput({ target: { value } }: { target: HTMLInputElement }) {
     if (this.timer) clearTimeout(this.timer)
     this.timer = setTimeout(() => (this.target = value), 1000)
   }
