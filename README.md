@@ -21,7 +21,7 @@ Import scripts from CDN or NPM:
 ###### CDN
 
 ```html
-<script type="module" src="https://esm.run/seia"></script>
+<script type="module" src="https://esm.run/seia" async></script>
 ```
 
 ###### NPM
@@ -48,17 +48,17 @@ Can't create React / Vue / Angular wrapper until [lit/lit#3334](https://github.c
 
 ## Attributes
 
-| Attribute      | Default                                                              | Comment                                          |
-| -------------- | -------------------------------------------------------------------- | ------------------------------------------------ |
-| api            | https://webmention.io/api/mentions.json                              |                                                  |
-| css            | undefined                                                            | Inject styles                                    |
-| powered-by     | true                                                                 |                                                  |
-| unsafe-html    | true                                                                 |                                                  |
+| Attribute      | Default                                                              | Comment                                                                   |
+| -------------- | -------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| api            | https://webmention.io/api/mentions.json                              |                                                                           |
+| css            | undefined                                                            | Inject styles                                                             |
+| powered-by     | true                                                                 |                                                                           |
+| unsafe-html    | true                                                                 |                                                                           |
 | sort-by        | 'created'                                                            | [webmention.io#sorting](https://github.com/aaronpk/webmention.io#sorting) |
 | sort-dir       | 'down'                                                               | [webmention.io#sorting](https://github.com/aaronpk/webmention.io#sorting) |
-| per-page       | 99                                                                   | [webmention.io#paging](https://github.com/aaronpk/webmention.io#paging)  |
-| target         | globalThis.location.href                                             | without searchParams                             |
-| fallback-photo | https://ui-avatars.com/api/?name=%NAME%&background=random&format=svg | `%NAME%` will be replaced with the `author.name` |
+| per-page       | 99                                                                   | [webmention.io#paging](https://github.com/aaronpk/webmention.io#paging)   |
+| target         | globalThis.location.href                                             | without searchParams                                                      |
+| fallback-photo | https://ui-avatars.com/api/?name=%NAME%&background=random&format=svg | `%NAME%` will be replaced with the `author.name`                          |
 
 ## Customizing
 
