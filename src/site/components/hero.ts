@@ -52,11 +52,11 @@ export class Hero extends LitElement {
     `
   }
 
-  @property({ type: String })
-  target = 'https://kwaa.dev/2023'
+  @property({ attribute: false })
+  target: string = 'https://kwaa.dev/2023'
 
   /** debounce timer */
-  @property({ type: Number })
+  @property({ attribute: false })
   timer: number | undefined = undefined
 
   private handleInput({ target: { value } }: { target: HTMLInputElement }) {
