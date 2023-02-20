@@ -20,17 +20,7 @@ export class App extends LitElement {
   }
 
   // prettier-ignore
-  static styles = unsafeCSS(`
-    ${reset}
-    @media (prefers-color-scheme: dark) {
-      :root, :host {
-        --seia-color-bg: #1e293b; /* slate-800 */
-        --seia-color-text: #f1f5f9; /* slate-100 */
-        --seia-color-primary: #fb923c; /* orange-400 */
-      }
-    };
-    @unocss-placeholder
-  `)
+  static styles = unsafeCSS(`${reset}@unocss-placeholder`)
 }
 
 declare global {
