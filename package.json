@@ -25,7 +25,8 @@
     ".": {
       "types": "./dist/seia.d.ts",
       "import": "./dist/seia.js"
-    }
+    },
+    "./styles/*": "./dist/styles/*"
   },
   "types": "dist/seia.d.ts",
   "files": [
