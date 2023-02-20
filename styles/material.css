@@ -1,0 +1,5 @@
+:root, :host {
+  --seia-color-bg: var(--md-sys-color-surface-variant);
+  --seia-color-text: var(--md-sys-color-on-surface-variant);
+  --seia-color-primary: var(--md-sys-color-primary);
+}
