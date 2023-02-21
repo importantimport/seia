@@ -17,7 +17,7 @@
     "type": "git",
     "url": "https://github.com/importantimport/seia.git"
   },
-  "homepage": "https://github.com/importantimport/seia",
+  "homepage": "https://seia.js.org",
   "bugs": "https://github.com/importantimport/seia/issues",
   "main": "dist/seia.js",
   "module": "dist/seia.js",
