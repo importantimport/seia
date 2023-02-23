@@ -145,7 +145,9 @@ export class Seia extends LitElement {
                                       transition
                                       hover="underline text-seia-primary"
                                       class="u-url"
-                                      >${author.url.split('://')[1]}</a
+                                      >${author.url
+                                        .split('://')[1]
+                                        .replace(/\/$/, '')}</a
                                     >
                                     <span>·</span>`}
                                   <a
