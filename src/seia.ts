@@ -64,6 +64,7 @@ export class Seia extends LitElement {
                                   w-12
                                   h-12
                                   mb-auto
+                                  bg="seia-bg"
                                   rounded="avatar"
                                   ring="2 seia-bg"
                                   class="u-photo"
