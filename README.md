@@ -110,9 +110,12 @@ Apply the Material Theme as shown above.
 
 ```html
 <!-- link -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/seia/dist/styles/material.css" />
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/seia/dist/styles/material.css" />
 <!-- inject -->
-<s-e-i-a css="@import url('https://cdn.jsdelivr.net/npm/seia/dist/styles/material.css');"></s-e-i-a>
+<s-e-i-a
+  css="@import url('https://cdn.jsdelivr.net/npm/seia/dist/styles/material.css');"></s-e-i-a>
 ```
 
 ### Emoji Fonts
