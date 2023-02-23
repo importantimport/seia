@@ -57,16 +57,17 @@ export class Seia extends LitElement {
                             shrink="0"
                             class="${activity.type === 'like'
                               ? 'p-like '
-                              : ''}h-cite">
+                              : ''}h-cite group">
                             <a class="u-url" href=${url}>
                               <figure relative class="p-author h-card">
                                 <img
                                   w-12
                                   h-12
                                   mb-auto
+                                  transition
                                   bg="seia-bg"
                                   rounded="avatar"
-                                  ring="2 seia-bg"
+                                  ring="2 seia-bg group-hover:seia-primary"
                                   class="u-photo"
                                   src=${author.photo ??
                                   this['fallback-photo'].replace(
