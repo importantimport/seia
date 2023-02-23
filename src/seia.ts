@@ -142,14 +142,16 @@ export class Seia extends LitElement {
                                   ${author.url &&
                                   html`<a
                                       href=${author.url}
-                                      hover="underline"
+                                      transition
+                                      hover="underline text-seia-primary"
                                       class="u-url"
                                       >${author.url.split('://')[1]}</a
                                     >
                                     <span>·</span>`}
                                   <a
                                     href=${url}
-                                    hover="underline"
+                                    transition
+                                    hover="underline text-seia-primary"
                                     class="u-url">
                                     <time
                                       class="dt-published"
