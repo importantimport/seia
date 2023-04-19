@@ -40,21 +40,20 @@
     "gen": "lit labs gen"
   },
   "devDependencies": {
-    "@iconify-json/simple-icons": "^1.1.44",
-    "@iconify-json/svg-spinners": "^1.1.0",
+    "@iconify-json/simple-icons": "^1.1.49",
+    "@iconify-json/svg-spinners": "^1.1.1",
     "@lit-labs/cli": "^0.3.0",
-    "@lit-labs/task": "^2.0.0",
-    "@types/trusted-types": "^2.0.2",
-    "@unocss/reset": "^0.49.4",
-    "esbuild": "^0.17.8",
-    "lit": "^2.6.1",
+    "@lit-labs/task": "^2.1.0",
+    "@types/trusted-types": "^2.0.3",
+    "@unocss/reset": "^0.51.4",
+    "esbuild": "^0.17.17",
+    "lit": "^2.7.2",
     "prettier-config-standard": "^5.0.0",
     "rollup-plugin-html-literals": "^1.1.6",
-    "tsup": "^6.6.2",
-    "typescript": "^4.9.3",
-    "unocss": "^0.49.4",
-    "vite": "^4.1.0",
-    "vite-plugin-dts": "^1.7.2"
+    "tsup": "^6.7.0",
+    "typescript": "^4.9.5",
+    "unocss": "^0.51.4",
+    "vite": "^4.2.2"
   },
   "peerDependencies": {
     "@types/trusted-types": "^2.0.2"
