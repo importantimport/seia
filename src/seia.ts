@@ -55,6 +55,7 @@ export class Seia extends LitElement {
                         ({ activity, data: { author, url } }) => html`
                           <div
                             shrink="0"
+                            hover="z-10"
                             class="${activity.type === 'like'
                               ? 'p-like '
                               : ''}h-cite group">
