@@ -294,6 +294,8 @@ export class Seia extends LitElement {
   })
 }
 
+export default Seia
+
 declare global {
   interface HTMLElementTagNameMap {
     's-e-i-a': Seia
