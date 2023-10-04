@@ -18,5 +18,14 @@
   "rules": {
     "import/no-extraneous-dependencies": "off",
     "lit/no-invalid-html": "off"
-  }
+  },
+  "overrides": [{
+    "files": ["vite.config.ts", "vite.config.*.ts"],
+    "env": {
+      "node": true
+    },
+    "rules": {
+      "import/no-unresolved": "off"
+    }
+  }]
 }
