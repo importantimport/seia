@@ -3,9 +3,9 @@ import { customElement } from 'lit/decorators.js'
 // tailwind preflights
 import reset from '@unocss/reset/tailwind.css?inline'
 
-import './components/header'
-import './components/hero'
-import './components/footer'
+import './components/header.ts'
+import './components/hero.ts'
+import './components/footer.ts'
 
 @customElement('site-app')
 export class App extends LitElement {

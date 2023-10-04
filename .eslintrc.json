@@ -14,5 +14,9 @@
   "plugins": ["@typescript-eslint"],
   "env": {
     "browser": true
+  },
+  "rules": {
+    "import/no-extraneous-dependencies": "off",
+    "lit/no-invalid-html": "off"
   }
 }

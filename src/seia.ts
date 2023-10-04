@@ -1,14 +1,14 @@
-import type { Mentions } from './utils/types'
 import { LitElement, html, unsafeCSS } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
 import { unsafeHTML } from 'lit/directives/unsafe-html.js'
 import { Task } from '@lit/task'
 // tailwind preflights
 import reset from '@unocss/reset/tailwind.css?inline'
+import type { Mentions } from './utils/types.ts'
 // reduce links
-import { reduce } from './utils/reduce'
+import { reduce } from './utils/reduce.ts'
 // activity type emoji
-import { emoji } from './utils/emoji'
+import { emoji } from './utils/emoji.ts'
 
 /**
  * Seia Component.
@@ -36,6 +36,7 @@ export class Seia extends LitElement {
               mx-auto
               my-4
               text="seia-primary" />`,
+          // eslint-disable-next-line no-console
           error: console.error,
           complete: ({ links }: Mentions) => {
             const { avatar, content } = reduce(links)
@@ -70,6 +71,7 @@ export class Seia extends LitElement {
                                   rounded="avatar"
                                   ring="2 seia-bg group-hover:seia-primary"
                                   class="u-photo"
+                                  alt=${author.name}
                                   src=${author.photo ??
                                   this['fallback-photo'].replace(
                                     '%NAME%',
@@ -98,7 +100,8 @@ export class Seia extends LitElement {
                       ${content.map(
                         ({
                           activity,
-                          data: { author, content, url },
+                          data: { author, content: dataContent, url },
+                          // eslint-disable-next-line camelcase
                           verified_date
                         }) => html`
                           <div
@@ -119,6 +122,7 @@ export class Seia extends LitElement {
                                   mb-auto
                                   rounded="avatar"
                                   class="u-photo"
+                                  alt=${author.name}
                                   src=${author.photo ??
                                   this['fallback-photo'].replace(
                                     '%NAME%',
@@ -158,7 +162,10 @@ export class Seia extends LitElement {
                                     class="u-url">
                                     <time
                                       class="dt-published"
-                                      datetime=${verified_date}
+                                      datetime=${
+                                        // eslint-disable-next-line camelcase
+                                        verified_date
+                                      }
                                       >${new Date(
                                         verified_date
                                       ).toLocaleDateString()}</time
@@ -170,8 +177,8 @@ export class Seia extends LitElement {
                             <!-- TODO: p-r-o-s-e (unocss/unocss#2189) -->
                             <div class="e-content">
                               ${html`${this['unsafe-html']
-                                ? unsafeHTML(content)
-                                : content}`}
+                                ? unsafeHTML(dataContent)
+                                : dataContent}`}
                             </div>
                           </div>
                         `
@@ -272,7 +279,7 @@ export class Seia extends LitElement {
   private mentions = new Task(this, {
     args: () => [this.target],
     task: async ([target]) =>
-      await fetch(
+      fetch(
         `${this.api}?${new URLSearchParams({
           target,
           page: '0',
@@ -282,6 +289,7 @@ export class Seia extends LitElement {
         }).toString()}`
       )
         .then((res) => res.json())
+        // eslint-disable-next-line no-console
         .catch(console.error)
   })
 }

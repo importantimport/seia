@@ -1,4 +1,4 @@
-import type { Mention } from './types'
+import type { Mention } from './types.ts'
 
 export const reduce = (links: Mention[]) =>
   links

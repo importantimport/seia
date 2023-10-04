@@ -2,7 +2,7 @@ import { LitElement, html, unsafeCSS } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
 import reset from '@unocss/reset/tailwind.css?inline'
 
-import '../../seia'
+import '../../seia.ts'
 
 @customElement('site-hero')
 export class Hero extends LitElement {
@@ -61,6 +61,7 @@ export class Hero extends LitElement {
 
   private handleInput({ target: { value } }: { target: HTMLInputElement }) {
     if (this.timer) clearTimeout(this.timer)
+    // eslint-disable-next-line no-return-assign
     this.timer = setTimeout(() => (this.target = value), 1000)
   }
 

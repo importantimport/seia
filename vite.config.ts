@@ -1,4 +1,4 @@
-import { defineConfig } from 'vite'
+import { type PluginOption, defineConfig } from 'vite'
 import UnoCSS from 'unocss/vite'
 import {
   presetAttributify,
@@ -19,7 +19,7 @@ export const plugins = [
     transformers: {
       before: [compileLitTemplates()]
     },
-  }) as any,
+  }) as PluginOption,
   UnoCSS({
     mode: 'shadow-dom',
     presets: [
