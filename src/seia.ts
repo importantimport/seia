@@ -2,7 +2,7 @@ import type { Mentions } from './utils/types'
 import { LitElement, html, unsafeCSS } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
 import { unsafeHTML } from 'lit/directives/unsafe-html.js'
-import { Task } from '@lit-labs/task'
+import { Task } from '@lit/task'
 // tailwind preflights
 import reset from '@unocss/reset/tailwind.css?inline'
 // reduce links

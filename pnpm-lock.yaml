@@ -17,9 +17,9 @@ devDependencies:
   '@lit-labs/compiler':
     specifier: 1.0.0-pre.0
     version: 1.0.0-pre.0
-  '@lit-labs/task':
-    specifier: ^3.0.2
-    version: 3.0.2
+  '@lit/task':
+    specifier: 1.0.0-pre.0
+    version: 1.0.0-pre.0
   '@rollup/plugin-typescript':
     specifier: ^11.1.4
     version: 11.1.4(rollup@3.29.4)(typescript@5.2.2)
@@ -27,11 +27,11 @@ devDependencies:
     specifier: ^0.56.5
     version: 0.56.5
   lit:
-    specifier: ^2.8.0
-    version: 2.8.0
+    specifier: 3.0.0-pre.1
+    version: 3.0.0-pre.1
   lit-html:
-    specifier: ^2.8.0
-    version: 2.8.0
+    specifier: 3.0.0-pre.1
+    version: 3.0.0-pre.1
   prettier-config-standard:
     specifier: ^7.0.0
     version: 7.0.0(prettier@3.0.3)
@@ -370,10 +370,8 @@ packages:
     resolution: {integrity: sha512-kXOeFbfCm4fFf2A3WwVEeQj55tMZa8c8/f9AKHMobQMkzNUfUj+antR3fRPaZJawsa1aZiP/Da3ndpZrwEe4rQ==}
     dev: true
 
-  /@lit-labs/task@3.0.2:
-    resolution: {integrity: sha512-X6d+KWZR3q1ZrXs/auM5PbZcW3B5RlpU4gqk/upstwTZM6JN19P6o9Qgo+qjovIDsUZsYnlGQqtdPBwPrKzLUA==}
-    dependencies:
-      '@lit/reactive-element': 1.6.3
+  /@lit-labs/ssr-dom-shim@1.1.2-pre.1:
+    resolution: {integrity: sha512-cRy/vafxn20Upocct6LeVzMatmnR0qHvX+7U00jPK0t9sxNaiAmpZyjHSUhLtUnG4jpuJW9UBIhVgYfZcgMo8A==}
     dev: true
 
   /@lit/localize-tools@0.6.10:
@@ -404,6 +402,18 @@ packages:
     resolution: {integrity: sha512-QuTgnG52Poic7uM1AN5yJ09QMe0O28e10XzSvWDz02TJiiKee4stsiownEIadWm8nYzyDAyT+gKzUoZmiWQtsQ==}
     dependencies:
       '@lit-labs/ssr-dom-shim': 1.1.1
+    dev: true
+
+  /@lit/reactive-element@2.0.0-pre.1:
+    resolution: {integrity: sha512-oKzaKLYHbXeeqfuDk8uS660Y3aH/LpMoctBwo5u2cS2vMwvurFX6raavNY/xsr4WsatNVn4sbA2VVx50hIAdTw==}
+    dependencies:
+      '@lit-labs/ssr-dom-shim': 1.1.2-pre.1
+    dev: true
+
+  /@lit/task@1.0.0-pre.0:
+    resolution: {integrity: sha512-9O+XywEqW7LA8Clw5yF/oFG5rTJrjpF7cm5ti3k6maemDUPo2HV7yh0Co7rNEPPSRqucEDG5s9OHmxPBFxVu9g==}
+    dependencies:
+      '@lit/reactive-element': 2.0.0-pre.1
     dev: true
 
   /@nodelib/fs.scandir@2.1.5:
@@ -1155,6 +1165,14 @@ packages:
       lit-html: 2.8.0
     dev: true
 
+  /lit-element@4.0.0-pre.1:
+    resolution: {integrity: sha512-g6z4W3HRponlFEYUVeJXo4KcnxFj1lWTLhFDAkRxmcUq/7xYkvd955dqkwQ8x1XBVgtCA4m2mOYB3RrwfTlVDw==}
+    dependencies:
+      '@lit-labs/ssr-dom-shim': 1.1.2-pre.1
+      '@lit/reactive-element': 2.0.0-pre.1
+      lit-html: 3.0.0-pre.1
+    dev: true
+
   /lit-html@2.8.0:
     resolution: {integrity: sha512-o9t+MQM3P4y7M7yNzqAyjp7z+mQGa4NS4CxiyLqFPyFWyc4O+nodLrkrxSaCTrla6M5YOLaT3RpbbqjszB5g3Q==}
     dependencies:
@@ -1173,6 +1191,14 @@ packages:
       '@lit/reactive-element': 1.6.3
       lit-element: 3.3.3
       lit-html: 2.8.0
+    dev: true
+
+  /lit@3.0.0-pre.1:
+    resolution: {integrity: sha512-HG5serwzvQuJL/G27Knpe7Hy/jFEJo8N2CaZe0pqipD26icgM5aeInWWaoktsKzE/XUc8/l/M5dghFDBhlEWWg==}
+    dependencies:
+      '@lit/reactive-element': 2.0.0-pre.1
+      lit-element: 4.0.0-pre.1
+      lit-html: 3.0.0-pre.1
     dev: true
 
   /local-pkg@0.4.3:
