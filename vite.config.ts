@@ -10,8 +10,16 @@ import {
   transformerVariantGroup
 } from 'unocss'
 import template from 'rollup-plugin-html-literals'
+import typescript from '@rollup/plugin-typescript'
+import { compileLitTemplates } from '@lit-labs/compiler'
 
 export const plugins = [
+  typescript({
+    declaration: true,
+    transformers: {
+      before: [compileLitTemplates()]
+    },
+  }) as any,
   UnoCSS({
     mode: 'shadow-dom',
     presets: [
@@ -50,5 +58,5 @@ export default defineConfig({
     }
   },
   esbuild: { legalComments: 'external' },
-  plugins
+  plugins,
 })
