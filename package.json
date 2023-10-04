@@ -37,7 +37,9 @@
     "build": "vite build",
     "build:site": "vite build -c vite.config.site.ts",
     "preview": "vite preview",
-    "gen": "lit labs gen"
+    "gen": "lit labs gen",
+    "lint": "eslint . --ignore-path .gitignore && prettier . --ignore-path .gitignore",
+    "format": "eslint . --ignore-path .gitignore --fix && prettier . --ignore-path .gitignore --write"
   },
   "devDependencies": {
     "@iconify-json/simple-icons": "^1.1.73",
@@ -45,8 +47,13 @@
     "@lit-labs/cli": "^0.6.0",
     "@lit-labs/compiler": "1.0.0-pre.0",
     "@lit/task": "1.0.0-pre.0",
+    "@open-wc/eslint-config": "^12.0.0",
     "@rollup/plugin-typescript": "^11.1.4",
+    "@typescript-eslint/eslint-plugin": "^6.7.4",
+    "@typescript-eslint/parser": "^6.7.4",
     "@unocss/reset": "^0.56.5",
+    "eslint": "^8.50.0",
+    "eslint-config-prettier": "^9.0.0",
     "lit": "3.0.0-pre.1",
     "lit-html": "3.0.0-pre.1",
     "prettier": "^3.0.3",
