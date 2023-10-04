@@ -36,6 +36,7 @@ export declare class Seia extends LitElement {
     'fallback-photo': string;
     private mentions;
 }
+export default Seia;
 declare global {
     interface HTMLElementTagNameMap {
         's-e-i-a': Seia;
