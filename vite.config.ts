@@ -1,4 +1,6 @@
 import { type PluginOption, defineConfig } from 'vite'
+import typescript from '@rollup/plugin-typescript'
+import { compileLitTemplates } from '@lit-labs/compiler'
 import UnoCSS from 'unocss/vite'
 import {
   presetAttributify,
@@ -10,8 +12,6 @@ import {
   transformerVariantGroup
 } from 'unocss'
 import template from 'rollup-plugin-html-literals'
-import typescript from '@rollup/plugin-typescript'
-import { compileLitTemplates } from '@lit-labs/compiler'
 
 export const plugins = [
   typescript({
@@ -47,7 +47,7 @@ export const plugins = [
       }
     }
   }),
-  template()
+  template(),
 ]
 
 export default defineConfig({
