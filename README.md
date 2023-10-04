@@ -44,14 +44,28 @@ Now add Seia components where you need them:
 
 ### Wrapper
 
-Can't create React / Vue / Angular wrapper until [lit/lit#3334](https://github.com/lit/lit/issues/3334) is fixed.
+TODO
+
+```jsonc
+{
+  "compileOptions": {
+    "emitDeclarationOnly": false // before: true
+  }
+}
+```
+
+```bash
+pnpm gen --frameworks <react/vue/angular>
+```
+
+<!-- Can't create React / Vue / Angular wrapper until [lit/lit#3334](https://github.com/lit/lit/issues/3334) is fixed. -->
 
 ## Attributes
 
 | Attribute      | Default                                                              | Comment                                                                   |
 | -------------- | -------------------------------------------------------------------- | ------------------------------------------------------------------------- |
 | api            | https://webmention.io/api/mentions.json                              |                                                                           |
-| css            | undefined                                                            | Inject styles                                                             |
+| css            | ''                                                                   | Inject styles                                                             |
 | powered-by     | true                                                                 |                                                                           |
 | unsafe-html    | true                                                                 |                                                                           |
 | sort-by        | 'created'                                                            | [webmention.io#sorting](https://github.com/aaronpk/webmention.io#sorting) |
@@ -98,10 +112,12 @@ It is not enabled by default since custom color schemes are encouraged.
 <!-- link -->
 <link
   rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/seia/dist/styles/dark.css" />
+  href="https://cdn.jsdelivr.net/npm/seia/dist/styles/dark.css"
+/>
 <!-- inject -->
 <s-e-i-a
-  css="@import url('https://cdn.jsdelivr.net/npm/seia/dist/styles/dark.css');"></s-e-i-a>
+  css="@import url('https://cdn.jsdelivr.net/npm/seia/dist/styles/dark.css');"
+></s-e-i-a>
 ```
 
 #### Material Theme
@@ -112,10 +128,12 @@ Apply the Material Theme as shown above.
 <!-- link -->
 <link
   rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/seia/dist/styles/material.css" />
+  href="https://cdn.jsdelivr.net/npm/seia/dist/styles/material.css"
+/>
 <!-- inject -->
 <s-e-i-a
-  css="@import url('https://cdn.jsdelivr.net/npm/seia/dist/styles/material.css');"></s-e-i-a>
+  css="@import url('https://cdn.jsdelivr.net/npm/seia/dist/styles/material.css');"
+></s-e-i-a>
 ```
 
 ### Emoji Fonts
