@@ -217,7 +217,7 @@ export class Seia extends LitElement {
   api = 'https://webmention.io/api/mentions.json'
 
   @property({ type: String })
-  css = undefined
+  css = ''
 
   @property({ type: Boolean })
   'powered-by' = true
